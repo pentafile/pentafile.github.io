@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Pentafile Project</title>
+		<style>
+			nav li.active a {
+			  color: lightgray;
+			  cursor: default;
+			}
+		</style>
+	</head>
+    <body>
+<nav>
+{% for item in site.data.menu.items %}
+    <li class="{% if item.url == page.url %}active{% endif %}">
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+{% endfor %}
+</nav>
