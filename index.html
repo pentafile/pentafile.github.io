@@ -1,3 +1,7 @@
-{% include header.html %}
+{% for item in site.data.menu.items %}
+    <li class="{% if item.url == page.url %}active{% endif %}">
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+{% endfor %}
 <h1>Wellcome to Pentafile Project</h1>
 {% include footer.html %}
