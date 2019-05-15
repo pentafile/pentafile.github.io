@@ -1,6 +1,14 @@
 ---
-title: This is my title
-layout: post
+title: Pentafile OKRs
+okrs:
+  - OKR 1
+  - OKR 2
+  - OKR 3
 ---
 
-Here is my page.
+<h1>{{page.title}}</h1>
+<ol>
+{% for okr in page.okrs %}
+	<i>{{okr}}</i>
+{% endfor %}
+</ol>
